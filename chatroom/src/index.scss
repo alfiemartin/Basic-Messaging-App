@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(59, 59, 59);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.chat-window {
+  width: 100%;
+  height: 80%;
+  background-color: rgb(59, 59, 59);
+  color: white;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+.enter-name-cont {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(25, 111, 177);
+  box-shadow: -1px 4px 29px 1px rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.enter-name-cont h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+.sign-in-butt {
+  height: 40px;
+  background: white;
+  border-radius: 3px;
+  display: flex;
+  width: 200px;
+  cursor: pointer;
+  min-width: 200px;
+  margin: 0 auto;
+  margin-top: 10px;
+
+  img {
+    width: 30px;
+    padding-left: 5px;
+    align-self: center;
+  }
+  p {
+    display: inline;
+    align-self: center;
+    padding-left: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: rgb(49, 49, 49);
+  }
+}
+
+.message-cont {
+  display: flex;
+  margin-bottom: 5px;
+  flex-direction: row;
+}
+
+.message-bar {
+  float: right;
+  padding-right: 20px;
+
+  form {
+    button {
+      border: none;
+      border-radius: 0;
+      padding: 1px;
+    }
+  }
+}
+
+.message-cont.me {
+  justify-content: flex-end;
+}
+
+.message-wrapper {
+  display: inline-block;
+  background-color: red;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.message-wrapper.me {
+  background-color: blue;
+}
