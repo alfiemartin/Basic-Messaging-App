@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { projectFirestore, timestamp } from "../firebase/config";
+import firebase from "firebase/app";
 
 const uploadMessage = (userName) => {
   const collectionRef = projectFirestore.collection("messages");
@@ -8,6 +9,7 @@ const uploadMessage = (userName) => {
     username: userName,
     uploadTime: timestamp(),
     message: document.querySelector(".message-box").value,
+    id: firebase.auth().currentUser.uid,
   });
 };
 
